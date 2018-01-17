@@ -26,10 +26,9 @@
     </parameters>
 
     <services>
-        <service id="doctrine_orm_phpcr_adapter.adapter_manager.abstract"
-                 class="%doctrine_orm_phpcr_adapter.adapter_manager.class%"
-                 factory-class="%doctrine_orm_phpcr_adapter.adapter_manager.class%"
-                 factory-method="create" abstract="true" />
+        <service id="doctrine_orm_phpcr_adapter.adapter_manager.abstract">
+                 <factory class="%doctrine_orm_phpcr_adapter.adapter_manager.class%" method="create" />
+        </service>
 
         <service id="doctrine_orm_phpcr_adapter.manager_configurator.abstract"
                  class="%doctrine_orm_phpcr_adapter.manager_configurator.class%" abstract="true">
